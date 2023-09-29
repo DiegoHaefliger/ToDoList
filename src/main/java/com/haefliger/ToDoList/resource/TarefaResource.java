@@ -1,8 +1,6 @@
 package com.haefliger.ToDoList.resource;
 
-import com.haefliger.ToDoList.dto.CategoriaDto;
 import com.haefliger.ToDoList.dto.TarefaDto;
-import com.haefliger.ToDoList.entity.Categoria;
 import com.haefliger.ToDoList.entity.Tarefa;
 import com.haefliger.ToDoList.enums.Prioridade;
 import com.haefliger.ToDoList.service.TarefaService;
@@ -21,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -55,7 +52,6 @@ public class TarefaResource {
 		return tarefaService.delete(idTarefa);
 	}
 
-
 	@GetMapping("/{idTarefa}")
 	@ApiOperation(value = "Retorna uma única Tarefa", response = String.class)
 	public Tarefa findById(@PathVariable Integer idTarefa) {
@@ -85,4 +81,5 @@ public class TarefaResource {
 	public List<Tarefa> findUsuario(@PathVariable Integer idUsuario) {
 		return tarefaService.findUsuario(idUsuario);
 	}
+
 }

@@ -1,14 +1,15 @@
 package com.haefliger.ToDoList.dto;
 
 import com.haefliger.ToDoList.enums.Prioridade;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Getter
+@AllArgsConstructor
 public class TarefaDto {
 
 	private Integer idUsuario;
