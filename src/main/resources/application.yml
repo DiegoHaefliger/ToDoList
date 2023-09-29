@@ -1,0 +1,25 @@
+spring:
+  main:
+    banner-mode: off
+  liquibase:
+    change-log: liquibase/master.xml
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/todolist5
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+cors:
+  allowed-origins: "*"
+
+server:
+  port: 8080
+
+
